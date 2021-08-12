@@ -143,7 +143,7 @@ const editCard = (event) => {
   } else {
     parentElement = event.target.parentNode.parentNode.parentNode;
   }
-  //console.log(parentElement.childNodes[5].childNodes[1])
+  
   taskTitle = parentElement.childNodes[3].childNodes[3];
   taskDescription = parentElement.childNodes[3].childNodes[5];
   taskType = parentElement.childNodes[3].childNodes[7];
