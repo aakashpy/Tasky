@@ -71,7 +71,6 @@ const generateHTMLmodal = (event) => {
   let taskType;
   let taskDescription;
   let parentElement;
-  let buttonstring;
   parentElement = event.target.parentNode.parentNode;
   taskimage = parentElement.childNodes[3].childNodes[1].src;
   taskTitle = parentElement.childNodes[3].childNodes[3].innerHTML;
@@ -155,6 +154,7 @@ const editCard = (event) => {
   taskType.setAttribute("contenteditable", "true");
   submitButton.setAttribute("onclick", "saveEdit.apply(this, arguments)");
   submitButton.innerHTML = "Save Changes";
+  submitButton.removeAttribute("data-bs-toggle");
 };
 
 const saveEdit = (event) => {
@@ -198,6 +198,7 @@ const saveEdit = (event) => {
   taskDescription.setAttribute("contenteditable", "false");
   taskType.setAttribute("contenteditable", "false");
   submitButton.innerHTML = "Open Task";
+  submitButton.setAttribute("data-bs-toggle","modal");
 };
 
 // Strigify
